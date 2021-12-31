@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FormDonGian2</title>
+    <style>
+        h1{
+            color: blue;
+            background: lightgreen;
+            font-size: 30px;
+        }
+        form{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div style="background: blanchedalmond; width:500px;height:400px; margin-right: auto;margin-left: auto">
+        <h1>
+            ĐĂNG KÝ HỌC VIÊN
+        </h1>
+        <form>
+            Họ và tên:
+            <input type="text" name="name">
+            <br><br>
+            Ngày sinh:
+            <input type="date" name="birthday" >
+            <br><br>
+            Giới tính:
+            <label style="color: black"><input type="radio" name="gender">Nam</label>
+            <label style="color: black"><input type="radio" name="gender">Nữ</label>
+            <br><br>
+            Địa chỉ:
+            <input type="text" name="address">
+            <br><br>
+            Lớp:
+            <select name="Lớp">
+<!--                <input placeholder="-Chọn lớp-">-->
+                <option value="c1221g1">c1221g1</option>
+            </select>
+            <br><br>
+            Email:
+            <input type="email" name="email">
+            <br><br>
+            Ngày sinh:
+            <input type="number" name="phone">
+            <br><br>
+            <div style="margin-left: 60px">
+                <input type="submit" value="Đăng ký"/>
+                <input type="reset" value="Nhập lại"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

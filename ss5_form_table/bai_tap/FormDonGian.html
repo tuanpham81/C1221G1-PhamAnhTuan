@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FormDonGian</title>
+    <style>
+        h1 {
+            color: white;
+            background: orangered;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        form {
+            color: blue;
+        }
+
+        td {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+<div style="background: lightblue;width:380px;height:260px;margin-left: auto;margin-right: auto">
+    <div style="background:white;width:350px;height:230px;position: relative;margin-left: 15px;top: 15px;">
+        <h1>
+            SỞ THÍCH CỦA BẠN
+        </h1>
+        <form>
+            Họ và tên:
+            </label><input type="text" name="name">
+            <br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;Email:
+            <input type="email" name="email">
+            <br><br>
+            <table>
+                <tr>
+                    <td style="color:blue">Sở thích:</td>
+                    <td><label><input name="hobby" type="checkbox"/> Thể thao</label></td>
+                    <td><label><input name="hobby" type="checkbox"/> Âm nhạc</label></td>
+                    <td><label><input name="hobby" type="checkbox"/> Đọc sách</label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label><input name="hobby" type="checkbox"/> Lướt web</label></td>
+                    <td><label><input name="hobby" type="checkbox"/> Chơi game</label></td>
+                    <td><label><input name="hobby" type="checkbox"/> Điện ảnh</label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label><input name="hobby" value="travel" type="checkbox"/> Du lịch</label></td>
+                </tr>
+            </table>
+            <div style="margin-left: 65px">
+                <input type="submit" value="Gửi thông tin"/>
+                <input type="reset" value="Nhập lại"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
