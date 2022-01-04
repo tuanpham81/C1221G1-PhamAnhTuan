@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+     <tr>
+         <th>Amount</th>
+         <th>From Currency</th>
+         <th>To Currency</th>
+         <th>&nbsp</th>
+     </tr>
+     <tr>
+         <td><input type="number" id="input"></td>
+         <td><select id="select1">
+                 <option value="a">VND</option>
+                 <option value="b">USD</option>
+             </select></td>
+         <td><select id="select2">
+                 <option value="a">VND</option>
+                 <option value="b">USD</option>
+            </select></td>
+         <td><button onclick="tinhtoan() " type="button">Convert</button></td>
+     </tr>
+    </table><br>
+    Result:
+    <script>
+        function tinhtoan(){
+            let input = document.getElementById('input').value
+            let select1 = document.getElementById('select1').value
+            let select2 = document.getElementById('select2').value
+            if(select1==select2){
+                alert(input)}
+            if(select1=="a" && select2=="b"){
+                alert(input/24000)}
+            if(select1=="b" && select2=="a"){
+                alert(input*24000)}
+        }
+
+
+    </script>
+</body>
+</html>
