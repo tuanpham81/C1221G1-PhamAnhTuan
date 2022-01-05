@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input type="number" id="so1" placeholder="nhập số 1">
+    <input type="number" id="so2" placeholder="nhập số 2">
+    <br><br>
+    <button id='cong' onclick="tinhtoan(this.id)">&plus;</button>
+    <button id='tru' onclick="tinhtoan(this.id)">&minus;</button>
+    <button id='nhan' onclick="tinhtoan(this.id)">&times</button>
+    <button id='chia' onclick="tinhtoan(this.id)">&divide</button>
+    <br>
+    <p id="result">result =</p>
+    <script>
+        function tinhtoan(id) {
+            let a = parseFloat(document.getElementById("so1").value)
+            let b = parseFloat(document.getElementById("so2").value)
+            switch (id) {
+                case 'cong':
+                    ketqua = a+b
+                    document.getElementById('result').innerText= 'result = ' + ketqua
+                    break
+                case 'tru':
+                    ketqua = a-b
+                    document.getElementById('result').innerText= 'result = ' + ketqua
+                    break
+                case 'nhan':
+                    ketqua = a*b
+                    document.getElementById('result').innerText= 'result = ' + ketqua
+                    break
+                case 'chia':
+                    ketqua = a/b
+                    document.getElementById('result').innerText= 'result = ' + ketqua
+                    break
+            }
+        }
+    </script>
+</body>
+</html>

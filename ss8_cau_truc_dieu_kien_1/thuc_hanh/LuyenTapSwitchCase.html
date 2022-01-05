@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với cấu trúc switch-case</title>
+</head>
+<body>
+<script>
+    let browser = prompt('Bạn đang dùng trình duyệt nào?');
+    // if (browser == 'Edge') {
+    // alert("You've got the Edge!");
+    // } else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera') {
+    // alert('Okay we support these browsers too');
+    // } else {
+    // alert('We hope that this page looks ok!');
+    // }
+    switch (browser) {
+        case 'Chrome'||'Firefox'||'Safari'||'Opera': //ko dùng được hoặc??
+            alert('We support')
+            break
+        case 'Edge':
+            alert('Not support')
+            break;
+        default:
+            alert('We hope')
+
+    }
+</script>
+</body>
+</html>

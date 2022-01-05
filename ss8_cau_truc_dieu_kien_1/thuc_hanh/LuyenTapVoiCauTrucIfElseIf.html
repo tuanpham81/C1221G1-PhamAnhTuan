@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If Else If</title>
+</head>
+<body>
+<script>
+     let ten = prompt('your name?');
+     let matkhau = prompt('password?');
+
+    if (ten === 'Admin'){
+        if (matkhau === 'TheMaster'){
+        document.write('Welcome')
+        } else if (matkhau == null){
+            document.write('Canceled')
+            } else {
+                document.write('Wrong password')
+                }
+    } else if(ten == null){
+        document.write('Canceled')
+        } else {
+            document.write('I dont know you')
+        }
+</script>
+</body>
+</html>
