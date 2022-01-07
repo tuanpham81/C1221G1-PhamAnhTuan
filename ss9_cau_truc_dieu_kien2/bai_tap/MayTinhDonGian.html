@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>máy tính đơn gỉan</title>
+    <style>
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p style="text-align: left">Casio FX500</p>
+    <table>
+        <tr>
+            <td colspan="4"><input id="window" style="width: 120px"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="2" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="3" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="+" onclick="nhap(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="5" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="6" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="-" style="width: 24px" onclick="nhap(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="8" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="9" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="*"  style="width: 24px" onclick="nhap(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick=location.reload() style="width: 24px"></td>
+            <td><input type="button" value="0" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="=" onclick="bang()"></td>
+            <td><input type="button" value="/" style="width: 24px" onclick="nhap(this.value)"></td>
+        </tr>
+    </table>
+<script>
+    function nhap(so) {
+        let n = document.getElementById("window").value;
+        document.getElementById("window").value=n+so;
+    }
+    // function nhap1() {
+    //     let n = document.getElementById("window").value;
+    //     document.getElementById("window").value=n+1;
+    // }
+    // function nhap2() {
+    //     let n = document.getElementById("window").value;
+    //     document.getElementById("window").value=n+2;
+    // }
+    // function cong() {
+    //     let n = document.getElementById("window").value;
+    // //     document.getElementById("window").value=n+"+";
+    // }
+    function bang() {
+        let str= document.getElementById("window").value;
+        let ketQua = eval(str);
+        document.getElementById("window").value = ketQua;
+    }
+</script>
+</body>
+</html>

@@ -5,146 +5,56 @@
     <title>Title</title>
 </head>
 <body>
-<div class="calculator">
-    <div class="calculator__display">0</div>
-    <div class="calculator__keys">
-        <button class="key--operator" data-action="add">+</button>
-        <button class="key--operator" data-action="subtract">-</button>
-        <button class="key--operator" data-action="multiply">&times;</button>
-        <button class="key--operator" data-action="divide">÷</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="key--equal" data-action="calculate">=</button>
-        <button>5</button>
-        <button>6</button>
-        <button>4</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>0</button>
-        <button data-action="decimal">.</button>
-        <button data-action="clear">AC</button>
-    </div>
-</div>
+<table>
+    <tr>
+        <td colspan="4"><input id="window"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="2" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="3"></td>
+        <td><input type="button" value="+" onclick="nhap(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="5" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="6" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="-" onclick="nhap(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7"></td>
+        <td><input type="button" value="8"></td>
+        <td><input type="button" value="9"></td>
+        <td><input type="button" value="*"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="0"></td>
+        <td><input type="button" value="0"></td>
+        <td><input type="button" value="0"></td>
+        <td><input type="button" value="=" onclick="bang()"></td>
+    </tr>
+</table>
 <script>
-
-    const calculator = document.querySelector('.calculator');
-    const keys = calculator.querySelector('.calculator__keys');
-
-    keys.addEventListener('click', e => {
-        if (e.target.matches('button')) {
-            // Do something
-        }
-    })
-    const key = e.target;
-    const action = key.dataset.action;
-
-    if (
-        action === 'add' ||
-        action === 'subtract' ||
-        action === 'multiply' ||
-        action === 'divide'
-    ) {
-        console.log('operator key!')
+    function nhap(so) {
+        let n = document.getElementById("window").value;
+        document.getElementById("window").value=n+so;
     }
-
-    if (action === 'decimal') {
-        console.log('decimal key!')
-    }
-
-    if (action === 'clear') {
-        console.log('clear key!')
-    }
-
-    if (action === 'calculate') {
-        console.log('equal key!')
-    }
-
-    const display = document.querySelector('.calculator__display')
-
-    keys.addEventListener('click', e => {
-        if (e.target.matches('button')) {
-            const key = e.target
-            const action = key.dataset.action
-            const keyContent = key.textContent
-            const displayedNum = display.textContent
-            // ...
-        }
-    })
-
-    if (!action) {
-        if (displayedNum === '0') {
-            display.textContent = keyContent
-        }
-    }
-
-    if (!action) {
-        if (displayedNum === '0') {
-            display.textContent = keyContent
-        } else {
-            display.textContent = displayedNum + keyContent
-        }
-    }
-
-    if (action === 'decimal') {
-        display.textContent = displayedNum + '.'
-    }
-
-    if (
-        action === 'add' ||
-        action === 'subtract' ||
-        action === 'multiply' ||
-        action === 'divide'
-    ) {
-        key.classList.add('is-depressed')
-    }
-
-    keys.addEventListener('click', e => {
-        if (e.target.matches('button')) {
-            const key = e.target
-            // ...
-
-            // Remove .is-depressed class from all keys
-            Array.from(key.parentNode.children)
-                .forEach(k => k.classList.remove('is-depressed'));
-        }
-    })
-
-    const calculator = document.querySelector('.calculator')
-
-    keys.addEventListener('click', e => {
-        if (e.target.matches('button')) {
-            // ...
-
-            if (
-                action === 'add' ||
-                action === 'subtract' ||
-                action === 'multiply' ||
-                action === 'divide'
-            ) {
-                key.classList.add('is-depressed')
-                // Add custom attribute
-                calculator.dataset.previousKeyType = 'operator'
-            }
-        }
-    })
-
-
-    if (displayedNum === '0' || calculator.dataset.previousKeyType === 'operator') {
-        display.textContent = keyContent;
-        calculator.dataset.previousKeyType= "";
-    } else {
-        display.textContent = displayedNum + keyContent;
-        calculator.dataset.previousKeyType= "";
-    }
-
-    if (displayedNum === '0' || calculator.dataset.previousKeyType === 'operator') {
-        display.textContent = keyContent;
-        calculator.dataset.previousKeyType= "";
-    } else {
-        display.textContent = displayedNum + keyContent;
-        calculator.dataset.previousKeyType= "";
+    // function nhap1() {
+    //       let n = document.getElementById("window").value;
+    //       document.getElementById("window").value=n+1;
+    // }
+    // function nhap2() {
+    //     let n = document.getElementById("window").value;
+    //     document.getElementById("window").value=n+2;
+    // }
+    // function cong() {
+    //     let n = document.getElementById("window").value;
+    //     document.getElementById("window").value=n+"+";
+    // }
+    function bang() {
+        let str= document.getElementById("window").value;
+        let ketQua = eval(str);
+        document.getElementById("window").value = ketQua;
     }
 </script>
 </body>
