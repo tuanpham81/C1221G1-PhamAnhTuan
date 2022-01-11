@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    let number = prompt("Số lượng số nguyên tố: ");
+    let count = 0;
+    let n = 2;
+    let i = 2
+    for(count; count < number; ){
+        while (i<n){
+            if (n%i == 0) {
+                i= i+1
+            } else {
+                count = count + 1;
+                document.write(number+ ', ')
+                }
+            }
+    }
+</script>
+</body>
+</html>
