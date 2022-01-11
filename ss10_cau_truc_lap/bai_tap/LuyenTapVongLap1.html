@@ -60,14 +60,31 @@
     // }
     // let tong = eval(document.write(a+'+'))
     // document.write(ketqua)
+    // bài 6
+    // let num = 1;
+    // let count = 0;
+    // let total = 0;
+    // while (count<21){
+    //    if (num%7 == 0){
+    //        count++
+    //        total += num
+    //    } else {
+    //        num++
+    //    }
+    // }
+    // document.write(total)
     // bài 7
-    let num = 1
-    let count = 1
-    for (;count<21;)
-        while(num%7 !== 0){
-        num++
+    let n = 1
+    for (;n<100;n++){
+        alert(n)
+        if (n%3==0 && n%5!=0){
+            alert('buzz')
+        } else if (n%5==0 && n%3!=0){
+            alert('fizz')
+        } else if (n%3==0 && n%5==0){
+            alert('fizzbuzz')
         }
-    
+    }
 </script>
 </body>
 </html>

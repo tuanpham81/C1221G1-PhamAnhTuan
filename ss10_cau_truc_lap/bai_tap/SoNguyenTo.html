@@ -6,19 +6,31 @@
 </head>
 <body>
 <script>
-    let number = prompt("Số lượng số nguyên tố: ");
-    let count = 0;
-    let n = 2;
-    let i = 2
-    for(count; count < number; ){
-        while (i<n){
-            if (n%i == 0) {
-                i= i+1
-            } else {
-                count = count + 1;
-                document.write(number+ ', ')
-                }
-            }
+    // let number = prompt("Số lượng số nguyên tố: ");
+    // let count = 0;
+    // let n = 2;
+    // let i = 1;
+    // for(count; count < number;){
+    //     while (i<n){
+    //         if (n%i == 0) {
+    //             n++
+    //             i++
+    //         } else {
+    //             count = count + 1;
+    //             document.write(n+ ', ')
+    //             }
+    //         }
+    // }
+    let n = 2
+    let i =1
+    while(n<20) {
+        if (n % i == 0) {
+            i +=1
+
+
+        } else {
+            alert('yes')
+        }
     }
 </script>
 </body>
