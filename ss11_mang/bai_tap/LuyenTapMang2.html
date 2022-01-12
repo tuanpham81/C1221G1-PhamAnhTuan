@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // bài 1
+    // a sample 2-D array
+    // var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+    //
+    // for (var i in a)
+    // {
+    //     console.log("row " + i);
+    //     for (var j in a[i])
+    //     {
+    //         console.log(" " + a[i][j]);
+    //     }
+    // }
+    //bài 2:
+    // let array =  [ 'c', 's', 'c', '2', '6', '1' ]
+    // document.write(array.reverse().join(""))
+    //bài 4
+    let arrayA =  [ 'c', 's', 'c', '2', '6', '0' ]
+    let arrayB =  [ 'c', 's', 'c', '2', '6', '1' ]
+    for( let i = 0; i < arrayA.length; i++)
+        if (arrayA[i] !== arrayB[i]) {
+            flag = false
+            break;
+        }
+    if (flag = true){
+        alert('2 mảng giống nhau')
+    } else {
+        alert('mảng khác nhau')
+    }
+
+</script>
+</body>
+</html>

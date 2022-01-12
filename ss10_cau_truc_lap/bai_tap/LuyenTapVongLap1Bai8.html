@@ -11,29 +11,32 @@
     function playGame() {
         let max = prompt("nhập vào giá trị lớn nhất của số cần đoán");
         // tạo số random;
-        let random=Math.ceil(max*Math.random());
-        // .ceil 7.1 =>8 => tròn trên. .floor 7.9 =>7 => làm trin dưới;
+        let random = Math.ceil(max * Math.random());
+        // .ceil 7.1 =>8 => tròn trên. .floor 7.9 =>7 => làm tròn dưới;
         // alert(random);
         let yourNumber;
-        let count =0;
+        let count = 1;
         do {
             count++;
-            yourNumber = prompt("Nhập số bạn cần dự đoán lần thứ "+ count);
-            if (yourNumber==random){
+            yourNumber = prompt("Nhập số bạn cần dự đoán lần thứ " + count);
+            if (yourNumber == random) {
                 alert("Bạn đã chiến thăng");
                 break;
-            }else if (yourNumber>random){
+            } else if (yourNumber > random) {
                 alert("Số bạn nhập lớn hơn kết quả");
-            }else {
-                alert("số bạn nhạp nhỏ hơn kết quả");
+            } else {
+                alert("số bạn nhập nhỏ hơn kết quả");
             }
-            if (count==3){
+            if (count == 3) {
                 alert("Bạn đã hết số lần dự đoán");
                 break;
-            }
-        }while (true)
 
+            }
+        } while (true)
     }
+
+
+
 </script>
 </body>
 </html>

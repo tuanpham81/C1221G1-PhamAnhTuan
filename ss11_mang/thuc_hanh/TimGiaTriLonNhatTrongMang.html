@@ -1,0 +1,23 @@
+<!DOCTYPE html>x`
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim gia tri lon nhat trong mang</title>
+</head>
+<body>
+<script>
+    let numbers = [-3, 5, 1, 3, 2, 10];
+    let max = numbers[0]; //gán giá trị lớn nhất là số đầu tiên trong dãy
+    // let index = 0
+    // không dùng index có đc ko?
+    let i = 1
+    for ( ; i<numbers.length; i++){
+        if(max < numbers[i]){ // so sánh max với số liền kề
+            max = numbers[i] // gán số liền kề = max nếu max nhỏ hơn
+            // index = i
+        }
+    } alert('gia tri lon nhat la ' + max + ' tai vi tri ' + i)
+    //sai vị trí i
+</script>
+</body>
+</html>

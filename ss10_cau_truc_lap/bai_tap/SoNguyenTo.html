@@ -23,13 +23,15 @@
     // }
     let n = 2
     let i =1
-    while(n<20) {
-        if (n % i == 0) {
-            i +=1
-
-
-        } else {
-            alert('yes')
+    let count = 0
+    for (;count<20;count++) {
+        while (i<n){
+            if (n % i !== 0) {
+                i++
+            }
+            if (n % i == 0) {
+                n++
+            }
         }
     }
 </script>

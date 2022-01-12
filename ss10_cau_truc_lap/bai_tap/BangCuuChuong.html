@@ -6,19 +6,19 @@
 </head>
 <body>
 <script>
-    let bcc;
-    let a;
-    let b;
-    bcc = "<table border='1px' cellspacing='0px'>"
-    for ( a = 2; a <9; a++ ) {
-        bcc = bcc + "<tr>";
-        for(b = 1; b< 10; b++){
-            bcc = bcc + "<td>" + a + "x" + b + "=" + a*b + "</td>";
+    let table;
+    let i
+    let j;
+    table = "<table border='1px' cellspacing='0px'>"
+    for ( i = 2; i <9; i++ ) {
+        table = table + "<tr>";
+        for(j = 1; j< 10; j++){
+            table = table + "<td>" + i + "x" + j + "=" + i*j + "</td>";
         }
-        bcc = bcc + "</tr>";
+        table = table + "</tr>";
     }
-    bcc = bcc + "</table>"
-    document.write(bcc)
+    table = table + "</table>"
+    document.write(table)
 </script>
 </body>
 </html>
