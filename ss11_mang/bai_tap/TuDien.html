@@ -5,21 +5,24 @@
     <title>từ điển</title>
 </head>
 <body>
-    <input id="noidung" placeholder="Nhập từ tiếng Anh cần dịch">
-    <button onclick="translate()">Dịch</button>
+    <input type="text" id="input" placeholder="Nhập từ tiếng Anh cần dịch">
+    <button onclick="dich()">Dịch</button>
     <p id="result"></p>
+
 <script>
-    en = Array [one, two, three, four, five];
-    vn = Array [mot, hai, ba, bon, nam];
-    let word = document.getElementById('noidung').value;
-    function translate() {
-        for (let i = 0; i < en.length; i++){
-            if(word == en[i]){
-                document.getElementById('result').innerText= vn[i]
+    let en = ['one', 'two', 'three', 'four', 'five'];
+    let vie = ['mot', 'hai', 'ba', 'bon', 'nam'];
+    let word = document.getElementById("input");
+    function dich() {
+        for (let i = 0; i < en.length; i++) {
+            if (word == en[i]) {
+                document.getElementById('result').innerText = vie[i];
                 break;
-            } else document.getElementById('result').innerText= "Không tìm thấy"
+            } else {
+                document.getElementById('result').innerText = "Không tìm thấy";
+            }
         }
-    } // xem lại
+    }
 </script>
 </body>
 </html>
