@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi feet và meter</title>
+</head>
+<body>
+<button onclick="footToMeter(this.value)">chuyển đổi feet</button>
+<button onclick="meterToFoot(this.value)">chuyển đổi meter</button>
+<script>
+    function footToMeter(foot){
+        foot = parseInt(prompt('Nhập feet:'));
+        let meter = 0.305 * foot;
+        alert(meter+ 'meter');
+    }
+    function meterToFoot(meter){
+        meter= parseInt(prompt('Nhập meter:'));
+        let foot = 3.279 * meter;
+        alert(foot + 'foot');
+    }
+</script>
+</body>
+</html>

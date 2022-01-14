@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<input type="number" onchange="isPrime(this.value)" placeholder="Nhập số cần kiểm tra" >
+<script>
+    function isPrime(number){
+        if (number <2){
+            return false;
+            // alert(number + ' ko là só nguyên tố');
+        } else {
+            for (let i = 2; i< number; i++){
+                if (number % i == 0){
+                    return false;
+                    // alert(number + ' ko là só nguyên tố');
+                }
+            }
+        return true;
+        }
+        // alert(number + 'là só nguyên tố');
+    }
+    if (isPrime(this.value)){
+        alert('là só nguyên tố');
+    } alert(' ko là só nguyên tố');
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1.5</title>
+</head>
+<body>
+<input type="text" placeholder="nhập tên ngôi sao" onchange="doiChieu(this.value)">
+<script>
+        let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+    let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
+    function doiChieu(sao) {
+        for ( let i = 0 ; i < stars.length;i++){
+            if (sao == stars[i]) {
+                alert(stars[i] + ' thuộc chòm sao ' + chomSao[i]);
+            }
+            if (sao !== stars[i]) {
+                alert('không có dữ liệu');
+            }
+
+        }
+    }
+</script>
+</body>
+</html>
