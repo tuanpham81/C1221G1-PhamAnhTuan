@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2.4</title>
+</head>
+<body>
+<input onchange="isNumber(this.value)">
+<script>
+    // cần xem lại, alert sai
+    function isNumber(n) {
+        if (typeof(n) == 'number'){
+            alert('là số')
+        } else {
+            alert('không phải là số')
+        }
+    }
+</script>
+</body>
+</html>

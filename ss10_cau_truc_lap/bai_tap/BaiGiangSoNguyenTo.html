@@ -55,7 +55,7 @@
         if (soTuNhien < 2) {
            return false;
         } else {
-            for (let i = 2; i < soTuNhien; i++) {
+            for (let i = 2; i < soTuNhien; i++) { // tại sao lại là i = 2, i = 0,1 lặp vô hạn, i =2 ko xét số 2
                 if (soTuNhien % i == 0) {
                     return false;
                 }

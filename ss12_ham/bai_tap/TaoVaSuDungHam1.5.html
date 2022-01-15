@@ -7,17 +7,18 @@
 <body>
 <input type="text" placeholder="nhập tên ngôi sao" onchange="doiChieu(this.value)">
 <script>
-        let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+    let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
     let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
     function doiChieu(sao) {
-        for ( let i = 0 ; i < stars.length;i++){
+        let flag = false;
+        for ( let i = 0; i < stars.length; i++){
             if (sao == stars[i]) {
                 alert(stars[i] + ' thuộc chòm sao ' + chomSao[i]);
+                flag = true;
+                break;
             }
-            if (sao !== stars[i]) {
-                alert('không có dữ liệu');
-            }
-
+        } if (flag == false){
+            alert('Không có thông tin')
         }
     }
 </script>

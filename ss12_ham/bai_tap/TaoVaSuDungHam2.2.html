@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2.2</title>
+</head>
+<body>
+<input id='bankinh' type="number" placeholder="Nhập bán kính">
+<button onclick="dienTich(document.getElementById('bankinh').value)">Tính diện tích</button>
+<button onclick="chuVi(document.getElementById('bankinh').value)">Tính chu vi</button>
+<script>
+    function dienTich(x) {
+        let y = x * x * 3.14;
+        alert('dien tich la ' + y)
+    }
+    function chuVi(x) {
+        let y = 2 * x * 3.14;
+        alert('chu vi là: ' + y)
+    }
+</script>
+</body>
+</html>

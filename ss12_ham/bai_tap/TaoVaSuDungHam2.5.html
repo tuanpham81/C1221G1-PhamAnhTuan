@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2.5</title>
+</head>
+<body>
+
+<script>
+    let a = prompt('số thứ nhất');
+    let b = prompt('số thứ hai');
+    let c = prompt('số thứ ba');
+    timMin(a,b,c)
+    function timMin(a,b,c) {
+        let min = a;
+        if (a > b) {
+            min = b
+        } else if (b > c) {
+            min = c
+        }
+        alert('số nhỏ nhất là ' + min)
+    }
+</script>
+</body>
+</html>

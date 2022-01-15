@@ -10,35 +10,35 @@
     <p id="result"></p>
 
 <script>
-    let en = ['one', 'two', 'three', 'four', 'five'];
-    let vie = ['mot', 'hai', 'ba', 'bon', 'nam'];
-    function dich() {
-        let word = document.getElementById("input").value;
-        for (let i = 0; i < en.length; i++) {
-            if (word == en[i]) {
-                document.getElementById('result').innerText = vie[i];
-                break;
-            }
-            if (word !== en[i]) {
-                document.getElementById('result').innerText = 'không tìm thấy';
-            }
-        }
-    }
-    // dùng flag
+    // let en = ['one', 'two', 'three', 'four', 'five'];
+    // let vie = ['mot', 'hai', 'ba', 'bon', 'nam'];
     // function dich() {
-    //     let flag =false;
     //     let word = document.getElementById("input").value;
     //     for (let i = 0; i < en.length; i++) {
     //         if (word == en[i]) {
     //             document.getElementById('result').innerText = vie[i];
-    //             flag =true;
     //             break;
     //         }
-    //     }
-    //     if (flag==false){
-    //         document.getElementById('result').innerText = "Không tìm thấy";
+    //         if (word !== en[i]) {
+    //             document.getElementById('result').innerText = 'không tìm thấy';
+    //         } //nếu sử dụng cách này nếu if đầu tiên không break sx bị báo không tim thấy khi tới if tiếp theo
     //     }
     // }
+    // dùng flag
+    function dich() {
+        let flag =false;
+        let word = document.getElementById("input").value;
+        for (let i = 0; i < en.length; i++) {
+            if (word == en[i]) {
+                document.getElementById('result').innerText = vie[i];
+                flag =true;
+                break;
+            }
+        }
+        if (flag==false){
+            document.getElementById('result').innerText = "Không tìm thấy";
+        }
+    }
 </script>
 </body>
 </html>
