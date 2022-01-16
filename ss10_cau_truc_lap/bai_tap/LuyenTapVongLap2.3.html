@@ -6,10 +6,24 @@
 </head>
 <body>
 <script>
-    // in hình tam giác
-    let i = '*';
-    for (; i< 8; i += i){
-        document.write(i)
+    let n = parseInt(prompt('Nhập chiều cao tam giác: '));
+    // in hình tam giác vuông
+    //n = chiều cao tam giác
+    // for (let i = 0; i < n; i++) {
+    //     //tao hang (row) *
+    //     for (let j = 0; j <= i; j++) {
+    //         document.writeln(" * ")
+    //     }
+    //     document.writeln("<br/>")
+    // }
+
+    // in hình tam giác vuông ngược
+    for (let i = n; i >= 0; i--) {
+        //tao hang (row) *
+        for (let j = 0; j <= i; j++) {
+            document.writeln(" * ")
+        }
+        document.writeln("<br/>")
     }
 </script>
 </body>

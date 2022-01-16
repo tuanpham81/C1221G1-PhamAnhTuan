@@ -6,7 +6,28 @@
 </head>
 <body>
 <script>
+    // kiểm tra điều kiện input value
+    let n;
+    let m;
+    let flag; // 2 biến dùng chung 1 flag đc ko?
+    do {
+        n = prompt('Nhập chiều cao: ');
+        flag = (parseInt(n)==n)&& n>0;
+    } while (!flag);
+    do {
+        m = prompt('Nhập chiều rộng: ');
+        flag = (parseInt(m)==m)&& m>0;
+    } while (!flag);
     // in hình chữ nhật
+    for(let i = 0; i <= n; i++) {
+        for (let j = 0; j <= m; j++) {
+            if (i == 0 || j == 0 || i == n || j == m) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        } document.write("<br>");
+    }
 </script>
 </body>
 </html>
