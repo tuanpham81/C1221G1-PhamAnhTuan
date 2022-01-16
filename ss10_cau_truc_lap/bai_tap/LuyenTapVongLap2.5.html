@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2.5</title>
+</head>
+<body>
+    <input placeholder="Số tiền ban đầu" type="number" min="1" id="money">
+    <br><br>
+    <input placeholder="Số tháng cho vay" type="number" min="1" id="month">
+    <br><br>
+    <input placeholder="Lãi suất hàng tháng" type="number" min="1" id="interest">
+    <button onclick="calculate()">Tính</button>
+    <br><br>
+    <p id="result">Tổng tiền là: </p>
+<script>
+    function calculate() {
+        let m1 = parseInt(document.getElementById('money').value);
+        let m2 = parseInt(document.getElementById('month').value);
+        let i = parseInt(document.getElementById('interest').value);
+        for ( let j = 1; j<=m2; j++ ){
+            m1 = m1 + m1*i/100
+        }
+        document.getElementById('result').innerText= 'Tổng tiền là: '+ m1
+    }
+</script>
+</body>
+</html>
