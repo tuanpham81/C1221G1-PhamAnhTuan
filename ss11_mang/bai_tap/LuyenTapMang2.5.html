@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2.5</title>
+</head>
+<body>
+<script>
+    // bài 5*: so sánh 2 mảng có giống nhau không, alert đang bị sai
+    let arrayA =  [ 'c', 's', 'c', '2', '6', '1' ]
+    let arrayB =  [ 'c', 's', 'c', '2', '6', '1' ]
+    let i = 0
+    while (i < arrayA.length) {
+        let flag = true
+        if (arrayA[i] !== arrayB[i]) {
+            flag = false
+            break;
+        } i++
+    } if (flag=true) {
+        alert('2 mảng giống nhau')
+    }
+    else {
+            alert('2 mảng khác nhau')
+    }
+</script>
+</body>
+</html>

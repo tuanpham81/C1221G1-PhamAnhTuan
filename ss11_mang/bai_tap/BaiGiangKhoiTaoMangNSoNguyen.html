@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo mảng n số nguyên</title>
+</head>
+<body>
+<script>
+    // BÀI SỬA
+    // Khai báo 1 mảng gồm n phần tử với n là số nguyên <20 :  5 điểm
+    // nhập giá trị cho mảng 10
+    // hiện thì mảng ra:  10
+    //            // xử lý
+    let n;
+    let flag;
+    do {
+        n = prompt("nhâp vào độ dài của mang");
+        flag = (parseInt(n)==n)&& n>0;
+    }while (!flag);
+    n = parseInt(n);
+    let array = new Array(n)
+    for (let i = 0; i <array.length ; i++) { // thay array.length = n đc ko?
+        array[i] = parseInt(prompt("nhập phần tử thứ : " + i))
+    }
+    alert(array);
+</script>
+</body>
+</html>

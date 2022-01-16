@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // // bài 1:  KHỞI TẠO MẢNG SỐ NGUYÊN GỒM 10 PHẦN TỬ VÀ TÌM SỐ LỚN HƠN 10 TRONG MẢNG
+    // let dayso = [0,2,4,6,8,10,12,14,16,18];
+    // for (let i = 0 ; i<dayso.length; i++){
+    //     if (dayso[i]>10){
+    //         document.write("Tìm được giá trị " + dayso[i] + " tại " + i +'<br>')
+    //         }
+    // }
+    // BÀI SỬA
+    let array = []
+    for (let i = 0; i <10; i++) {
+        array[i] = parseInt(prompt("nhập phần tử thứ : " + i))
+    }
+    alert(array);
+    for (let i = 0 ; i<10; i++){
+        if (array[i]>10){
+            document.write("Tìm được giá trị " + array[i] + " tại " + i +'<br>')
+            }
+    }
+</script>
+</body>
+</html>
