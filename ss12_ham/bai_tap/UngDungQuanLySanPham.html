@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng quản lý sản phẩm</title>
+</head>
+<body>
+    <div id="inputForm">
+        <input type="text" id="productName" >
+        <button onclick="addProduct(document.getElementById('productName').value)">Add</button>
+    </div>
+
+    <br>
+    <h3>Product Name</h3>
+    <table id="display"></table>
+<script>
+    let products = ['Nokia','Iphone'];
+    displayAll()
+    function displayAll() {
+        let str = '<tr>' +
+            '<td>No</td>' +
+            '<td>' + products.length + ' sản phẩm' + '</td>' +
+            '<td></td>' +
+            '<td></td>'+
+            '</tr>';
+        for (let i = 0; i < products.length; i++){
+            str += '<tr>' +
+                '<td>' + i + '</td>'+ // làm sao để hiển thị i+1?
+                '<td>' + products[i] +'</td>' +
+                '<td><button onclick="editProduct('+i+')">Edit</button></td>' +
+                '<td><button onclick="delProduct('+i+')">Delete</button></td>' +
+                '</tr>';
+        }
+        document.getElementById('display').innerHTML = str;
+    }
+
+    function addProduct(p) {
+        products.push(p);
+        displayAll();
+        alert('Đã thêm sản phẩm '+ p);
+    }
+    function delProduct(index) {
+        products.splice(index,1);
+        displayAll();
+        alert('Đã xóa sản phẩm ' + products[index]); // chưa hiển thị đc tên sản phẩm
+    }
+    function editProduct(index) {
+        let editForm;
+        editForm = '<input type="text" id="editedProduct" value="'+products[index]+'">' +
+            '<button onclick="saveProduct('+index+')">Save</button>';
+        document.getElementById('inputForm').innerHTML=editForm;}
+
+
+    function saveProduct(index) {
+        products[index] = document.getElementById('editedProduct').value;
+        document.getElementById('editedProduct').innerHTML='';
+        displayAll()
+    }
+    
+</script>
+</body>
+</html>

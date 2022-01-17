@@ -6,10 +6,9 @@
 </head>
 <body>
 <input onchange="isNumber(this.value)">
-<script>
-    // cần xem lại, alert sai
+<script> // ko dùng đc hàm typeof()
     function isNumber(n) {
-        if (typeof(n) == 'number'){
+        if (isNaN(n) == false){
             alert('là số')
         } else {
             alert('không phải là số')

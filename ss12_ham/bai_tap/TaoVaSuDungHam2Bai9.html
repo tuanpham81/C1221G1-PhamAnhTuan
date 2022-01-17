@@ -6,7 +6,25 @@
 </head>
 <body>
 <script>
-    // chưa hiểu đề
+    let arr = [];
+    for (let i = 0; i < 4; i++) {
+        arr[i] = prompt('Nhập ký tự thứ ' + i);
+    }
+    let a = prompt('Nhập ký tự cần tìm:')
+    let flag = false;
+    for (let i = 0; i < arr.length; i++) {
+        if (a == arr[i]) {
+            flag = true
+            if (flag == true) {
+                alert('tìm thấy ' + a + ' ở vị trí thứ ' + i)
+                break;
+            }
+        }
+    }
+    if (!flag) {
+        alert('Không tìm thấy')
+    }
+
 </script>
 </body>
 </html>

@@ -13,55 +13,55 @@
     // nếu như n chia hết cho bất kỳ 1 số nào 2....n-1; => Ko phải snt
     // ngược ại là số nt
 
-    // let count = 0; // đếm số nguyên tố
-    // let soTuNhien = 0;
-    // let result = "";
-    // while (count < 20) {
-    //     let flag = true;
-    //     if (soTuNhien < 2) {
-    //         flag = false;
-    //     } else {
-    //         // tìm số lần mà số n chia hết cho các số từ 2 đến n-1;
-    //         for (let i = 2; i < soTuNhien; i++) {
-    //             if (soTuNhien % i == 0) {
-    //                 flag = false;
-    //                 break;
-    //             }
-    //         }
-    //     }
-    //     if (flag == true) {
-    //         count++;
-    //         result += soTuNhien + ","
-    //     }
-    //     soTuNhien++;
-    // }
-    // alert(num + " số nguyên tố : " + result);
-
-    // cách 2:
-    let count =0;
-    let n =0;
-    let result ="";
-    while (count<5){
-        if (kiemTraSNT(n)){
-            result+= n+ ","
-            count++;
-        }
-        n++;
-    }
-    alert(result);
-
-    function kiemTraSNT(soTuNhien) {
+    let count = 0; // đếm số nguyên tố
+    let soTuNhien = 0;
+    let result = "";
+    while (count < 20) {
+        let flag = true;
         if (soTuNhien < 2) {
-           return false;
+            flag = false;
         } else {
-            for (let i = 2; i < soTuNhien; i++) { // tại sao lại là i = 2, i = 0,1 lặp vô hạn, i =2 ko xét số 2
+            // tìm số lần mà số n chia hết cho các số từ 2 đến n-1;
+            for (let i = 2; i < soTuNhien; i++) {
                 if (soTuNhien % i == 0) {
-                    return false;
+                    flag = false;
+                    break;
                 }
             }
         }
-        return true;
+        if (flag == true) {
+            count++;
+            result += soTuNhien + ","
+        }
+        soTuNhien++;
     }
+    alert(num + " số nguyên tố : " + result);
+
+    // cách 2:
+    // let count =0;
+    // let n =0;
+    // let result ="";
+    // while (count<5){
+    //     if (kiemTraSNT(n)){
+    //         result+= n+ ","
+    //         count++;
+    //     }
+    //     n++;
+    // }
+    // alert(result);
+    //
+    // function kiemTraSNT(soTuNhien) {
+    //     if (soTuNhien < 2) {
+    //        return false;
+    //     } else {
+    //         for (let i = 2; i < soTuNhien; i++) { // tại sao lại là i = 2, i = 0,1 lặp vô hạn, i =2 ko xét số 2
+    //             if (soTuNhien % i == 0) {
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    //     return true;
+    // }
 </script>
 </body>
 </html>

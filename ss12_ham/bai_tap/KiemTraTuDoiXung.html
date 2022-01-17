@@ -5,25 +5,27 @@
     <title>Kiểm tra từ đối xứng</title>
 </head>
 <body>
-<!--<input type="text" onchange="isPalindrome(this.value)">-->
+<input id="word" type="text" onchange="isPalindrome(this.value)">
 <script>
-    // function isPalindrome(s) {
-    //     let flag = false;
-    //     for (let i = 0; i < s.length; i++){
-    //         if (s[i] == s[s.length - 1]){
-    //             flag = true;
-    //             i++;
-    //             s.length--;
-    //         }
-    //     }
-    //     if (flag = true){
-    //         alert('là từ đối xứng')
-    //     } else {
-    //         alert('ko phải là từ đối xứng')
-    //     }
-    // }
-    let arr = ['oddo']
-    alert(arr[0])
+    function isPalindrome() {
+        let str = document.getElementById('word').value;
+        let arr = str.split('')// có cách nào kiểm tra được mà ko cần chuyển từ chuỗi thành mảng ko?
+        let flag;
+        for (let i = 0; i < arr.length;i++){
+            if (arr[i] == arr[arr.length - 1]){
+                flag = true;
+                arr.length--;
+            } else {
+                flag = false
+                break;
+            }
+        }
+        if (flag == true){
+            alert('là từ đối xứng')
+        } else {
+            alert('ko phải là từ đối xứng')
+        }
+    }
 </script>
 </body>
 </html>
