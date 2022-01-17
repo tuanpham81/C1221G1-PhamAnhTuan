@@ -6,24 +6,28 @@
 </head>
 <body>
 <script>
-    let arr = [];
-    for (let i = 0; i < 4; i++) {
-        arr[i] = prompt('Nhập ký tự thứ ' + i);
-    }
-    let a = prompt('Nhập ký tự cần tìm:')
-    let flag = false;
-    for (let i = 0; i < arr.length; i++) {
-        if (a == arr[i]) {
-            flag = true
-            if (flag == true) {
-                alert('tìm thấy ' + a + ' ở vị trí thứ ' + i)
-                break;
+    let n = parseInt(prompt('Số lượng ký tự:'));
+    function timKiem(arr,a) {
+        arr = [];
+        for (let i = 0; i < n; i++) {
+            arr[i] = prompt('Nhập ký tự thứ ' + i);
+        }
+        a = prompt('Nhập ký tự cần tìm:');
+        let flag = false;
+        for (let i = 0; i < n; i++) {
+            if (a == arr[i]) {
+                flag = true
+                if (flag == true) {
+                    alert('tìm thấy ' + a + ' ở vị trí thứ ' + i)
+                    break;
+                }
             }
         }
+        if (!flag) {
+            alert('-1')
+        }
     }
-    if (!flag) {
-        alert('Không tìm thấy')
-    }
+    timKiem()
 
 </script>
 </body>
