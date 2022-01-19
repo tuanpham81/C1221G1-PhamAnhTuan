@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(nhietDo) {
+            this.nhietDo = nhietDo;
+        }
+
+        getNhietDo() {
+            return this.nhietDo;
+        }
+
+        setNhietDo(value) {
+            this.nhietDo = value;
+        }
+
+        chuyenDoiNhietDo(nhietDo) {
+            let f = nhietDo * 9/5 + 32;
+            let k = nhietDo + 273.15;
+            alert('Độ F là: ' + f);
+            alert('Độ K là: ' + k);
+
+        }
+
+    }
+    let input = new Temperature(25);
+    let doC = input.getNhietDo();
+    alert(doC)
+    input.chuyenDoiNhietDo(25);
+</script>
+</body>
+</html>

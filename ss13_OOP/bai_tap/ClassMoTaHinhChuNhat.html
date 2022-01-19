@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class mo ta hinh chu nhat</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1920px" height="1080px"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this. height = height;
+        }
+        getWidth() {
+            return this.width;
+        }
+
+        setWidth(value) {
+            this.width = value;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        setHeight(value) {
+            this.height = value;
+        }
+
+        tinhDienTich() {
+            let s = this.width * this.height;
+            alert('diện tích là ' + s);
+        }
+
+        tinhChuVi() {
+            let p = (this.width + this.height) * 2;
+            alert('chu vi là ' + p);
+        }
+
+        draw(x, y) {
+            let canvas = document.getElementById('myCanvas');
+            let ctx = canvas.getContext('2d');
+            ctx.strokeRect(x,y,this.width,this.height);
+
+        }
+    }
+
+    let hinhChuNhat = new Rectangle(50,50);
+    let chieuCao = hinhChuNhat.getHeight();
+    let chieuRong = hinhChuNhat.getWidth();
+    alert(chieuCao + ',' + chieuRong)
+    hinhChuNhat.tinhChuVi();
+    hinhChuNhat.tinhDienTich();
+    hinhChuNhat.draw(0,0);
+
+</script>
+</body>
+</html>
