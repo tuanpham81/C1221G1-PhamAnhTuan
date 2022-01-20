@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    class switchButton {
+    class SwitchButton {
         constructor() {
         }
         connectToLamp(lamp){
@@ -19,21 +19,21 @@
             return this.lamp.turnOn()
         }
     }
-    class electricLamp {
+    class ElectricLamp {
         constructor() {
         }
         turnOff() {
-            console.log('tắt')
+            console.log('tắt') // ko hiển thị tên được vì ko có thuộc tính name
         }
         turnOn() {
             console.log('bật')
         }
 
     }
-    let congTac1 = new switchButton();
-    let congTac2 = new switchButton();
-    let lamp1 = new electricLamp();
-    let lamp2 = new electricLamp();
+    let congTac1 = new SwitchButton();
+    let congTac2 = new SwitchButton();
+    let lamp1 = new ElectricLamp();
+    let lamp2 = new ElectricLamp();
     congTac1.connectToLamp(lamp1);
     congTac2.connectToLamp(lamp2);
     congTac1.switchOff();

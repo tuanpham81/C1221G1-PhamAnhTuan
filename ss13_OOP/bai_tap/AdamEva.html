@@ -17,21 +17,24 @@
             this.weight--
         }
         isEmpty(){
-            if(this.weight > 0){
+            if (this.weight == 0){
                 return true
+            } else {
+                return false
             }
         }
     }
     class Human {
         constructor(name, gender, weight) {
             this.name = name;
-            this.gender;
+            this.gender = gender;
             this. weight = weight;
         }
         isMale(){
+
         }
         setGender(){
-            return this.isMale();
+            return this.gender();
         }
         getName(){
             return this.name;
@@ -50,15 +53,15 @@
                 this.eat()
             }
         }
-        eat(){
-            Apple.weight--;
+        eat(tao){
+            tao.decrease();
             this.weight++;
         }
         say(speech){
             console.log(speech)
         }
     }
-    let Adam = new Human(Adam,true,70);
+    let Adam = new Human('Adam',true,70);
     let Eva = new Human(Eva,false,50)
 </script>
 </body>
