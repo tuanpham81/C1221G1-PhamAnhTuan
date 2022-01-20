@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>công tắc vs bóng đèn</title>
+</head>
+<body>
+<script>
+    class switchButton {
+        constructor() {
+        }
+        connectToLamp(lamp){
+            this.lamp = lamp;
+        }
+        switchOff() {
+            return this.lamp.turnOff()
+        }
+        switchOn(){
+            return this.lamp.turnOn()
+        }
+    }
+    class electricLamp {
+        constructor() {
+        }
+        turnOff() {
+            console.log('tắt')
+        }
+        turnOn() {
+            console.log('bật')
+        }
+
+    }
+    let congTac1 = new switchButton();
+    let congTac2 = new switchButton();
+    let lamp1 = new electricLamp();
+    let lamp2 = new electricLamp();
+    congTac1.connectToLamp(lamp1);
+    congTac2.connectToLamp(lamp2);
+    congTac1.switchOff();
+    congTac2.switchOn();
+
+</script>
+</body>
+</html>

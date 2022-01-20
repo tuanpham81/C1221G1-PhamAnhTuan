@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adam vs eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight= 10;
+        }
+        getWeight(){
+            return this.weight
+        }
+        decrease(){
+            this.weight--
+        }
+        isEmpty(){
+            if(this.weight > 0){
+                return true
+            }
+        }
+    }
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender;
+            this. weight = weight;
+        }
+        isMale(){
+        }
+        setGender(){
+            return this.isMale();
+        }
+        getName(){
+            return this.name;
+        }
+        setName(newName){
+            this.name= newName;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(newWeight){
+            this.weight = newWeight;
+        }
+        checkApple(apple){
+            if (apple.isEmpty){
+                this.eat()
+            }
+        }
+        eat(){
+            Apple.weight--;
+            this.weight++;
+        }
+        say(speech){
+            console.log(speech)
+        }
+    }
+    let Adam = new Human(Adam,true,70);
+    let Eva = new Human(Eva,false,50)
+</script>
+</body>
+</html>

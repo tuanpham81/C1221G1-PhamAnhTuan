@@ -25,16 +25,15 @@
         }
     }
     class FlashLamp {
-        constructor(battery) {
-            this.battery = battery;
-        };
-        setBattery(battery) {
-            this.battery = battery;
-        };
+        constructor() {
+        }
+        setBattery(battery1) {
+            this.battery = battery1;
+        }
 
         getBatteryInfo() {
             return this.battery.getEnergy();
-        };
+        }
 
         light() {
             if(this.status){
@@ -42,16 +41,16 @@
             } else {
                 alert("Not lighting");
             }
-        };
+        }
 
         turnOn() {
             this.status = true;
-        };
+        }
 
         turnOff() {
             this.status = false;
         }
-    };
+    }
 
     let battery = new Battery();
     battery.setEnergy(10);
