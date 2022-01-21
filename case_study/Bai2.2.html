@@ -6,11 +6,15 @@
 </head>
 <body>
 <script>
-    // vẽ hình tam giác vuông rỗng
-    for (let i = 0; i < 5; i++) {
-        for (let i = 0; i < i; i++) {
-            document.writeln('*')
-        } document.write('<br>')
+    let char;
+    do {char = prompt('Nhập ký tự: ')
+    }
+    while(isNaN(char) == false)
+
+    if (char == 'u' || 'e' || 'o' || 'a' || 'i' ){
+        alert('là nguyên âm')
+    } else {
+        alert('là phụ âm')
     }
 </script>
 </body>

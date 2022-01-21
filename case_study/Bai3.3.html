@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3.3</title>
+</head>
+<body>
+<script>
+    let a = [5, 2, 5];
+    let b = [6, 3, 4];
+    let c = [];
+    for (let i = 0; i< a.length; i++){
+        c.push(a[i]/b[i])
+    }
+    console.log(c);
+
+    function compareNumbers(a, b) {
+        return a - b;
+    }
+    c.sort(compareNumbers);
+    console.log(c[length-1]);
+
+</script>
+</body>
+</html>

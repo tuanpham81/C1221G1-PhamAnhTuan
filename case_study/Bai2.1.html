@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2.1</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt('Nhập lương của bạn: '));
+    let i;
+        if (salary >= 15) {
+            i = 0.2
+        }
+        if (7 <= salary < 15) {
+            i = 0.1
+        }
+        if (salary < 7){
+            i = 0.05
+         }
+    let tax = salary * i;
+    let newSalary = salary - tax;
+    alert('Thuế thu nhập là: '+ tax);
+    alert('Lương ròng là: '+ newSalary);
+
+</script>
+</body>
+</html>
