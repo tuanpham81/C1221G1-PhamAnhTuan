@@ -6,19 +6,18 @@
 </head>
 <body>
 <script>
-    // cần xem lại
     let output = '';
-    let str = (prompt('Nhập số:'));
+    let str = prompt('Nhập số:');
     let arr = str.split('');
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     let char = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín', 'không'];
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < numbers.length; j++) {
             if (arr[i] == numbers[j]) {
-                output += document.write(char[j])
+                output += ' ' + char[j]
             }
         }
-    }  alert(output)
+    }  document.write(output)
 
 </script>
 </body>
