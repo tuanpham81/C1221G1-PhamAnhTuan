@@ -5,22 +5,20 @@
     <title>bài 4.1</title>
 </head>
 <body>
-<p id="output"></p>
 <script>
     // cần xem lại
-    let output = null;
-    let str = prompt('Nhập số:');
+    let output = '';
+    let str = (prompt('Nhập số:'));
     let arr = str.split('');
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     let char = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín', 'không'];
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < numbers.length; j++) {
             if (arr[i] == numbers[j]) {
-                output = output + document.write(char[j])
+                output += document.write(char[j])
             }
         }
-        document.write(output)
-    }
+    }  alert(output)
 
 </script>
 </body>
