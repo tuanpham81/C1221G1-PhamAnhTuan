@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1.4</title>
+</head>
+<body>
+<script>
+    //vẽ hình tam giác cân rỗng
+    for (let i = 1; i <= 5; i++) {
+        for (let k = 5; k >= i ; k--) {
+            document.write("&nbsp&nbsp&nbsp")
+        }
+        for (let j = 1; j <= i*2-1; j++) {
+            if(i == 1 || i == 5 || j == 1 || j == i*2-1){
+                document.writeln("*")
+            } else {
+                document.write("&nbsp&nbsp&nbsp")
+            }
+        }
+        document.writeln("<br/>")
+    }
+
+</script>
+</body>
+</html>

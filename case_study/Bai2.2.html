@@ -6,8 +6,10 @@
 </head>
 <body>
 <script>
-    let char;
-    do {char = prompt('Nhập ký tự: ')
+    // kiểm tra lại
+    let char = null;
+    do {
+        char = prompt('Nhập ký tự: ').value;
     }
     while(isNaN(char) == false)
 

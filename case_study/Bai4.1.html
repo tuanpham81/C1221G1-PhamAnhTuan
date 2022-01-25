@@ -6,7 +6,36 @@
 </head>
 <body>
 <script>
+    // chuẩn hóa chuỗi
     let str = 'tRuong    TaN   HAI ';
+    str = str.toLowerCase().trim();
+    let arr1 = str.split('');
+
+    for (let i = 0; i < arr1.length; i++) {
+        if(arr1[i] == ' ' && arr1[i+1] == ' '){
+            arr1.splice(i,1);
+            i -= 1
+        }
+    }
+    arr1[0] = arr1[0].toUpperCase();
+    for (let i = 1; i < arr1.length; i++) {
+        if(arr1[i] == ' ' && arr1[i+1] != ' '){
+            arr1[i+1] = arr1[i+1].toUpperCase()
+        }
+    }
+    arr1 = arr1.join('');
+    alert(arr1);
+
+    //tìm từ dài nhất trong chuỗi
+    let arr2 = arr1.split(' ');
+    let longestWord= arr2[0];
+    for (let i = 1; i < arr2.length ; i++) {
+        if(longestWord.length < arr2[i].length ){
+            arr2[i] = longestWord;
+        }
+    }
+    alert(longestWord);
+
 
 </script>
 </body>

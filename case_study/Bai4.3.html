@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4.3</title>
+</head>
+<body>
+<script>
+    let string1 = "aabcc";
+    let string2 = "adcaa";
+    // áp dụng bài 4.2 chuyển 2 chuỗi về 2 mảng với phần tử ko lặp
+    let arr1 = string1.split('');
+    let uniqueSet1 = new Set(arr1);
+    let backToArray1 = [...uniqueSet1];
+
+    let arr2 = string2.split('');
+    let uniqueSet2 = new Set(arr2);
+    let backToArray2 = [...uniqueSet2];
+
+    let count = 0;
+    for (let i = 0; i < backToArray1.length; i++) {
+        for (let j = 0; j < backToArray2.length; j++) {
+            if (backToArray1[i] == backToArray2[j]) {
+                count++;
+            }
+        }
+    }
+    alert(count)
+</script>
+</body>
+</html>
