@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<script>
+    function isFibonacci(num) {
+        let i = 0;
+        let fibonacciNum = 1;
+        do {
+            fibonacciNum += i;
+            i = fibonacciNum - i;
+            if(num == fibonacciNum){
+                return true;
+            }
+        } while (fibonacciNum <= num)
+    }
+
+    function timSoFibonacci(arr) {
+        arr = [1,5,6,13,9,12,8,0,5,1];
+        let fibonacciArr = [];
+        for (let i = 0; i < arr.length ; i++) {
+            if(isFibonacci(arr[i]) == true){
+                fibonacciArr.push(arr[i]);
+            }
+        }
+        function compare(a,b){
+            return a-b;
+        }
+        alert(fibonacciArr.sort(compare));
+    }
+
+    timSoFibonacci();
+</script>
+</body>
+</html>

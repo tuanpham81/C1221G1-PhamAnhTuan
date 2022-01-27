@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+<script>
+    class BankAccount {
+        constructor(idNumber,userName,bankName,money) {
+            this.idNumber = idNumber;
+            this.userName = userName;
+            this.bankName = bankName;
+            this.money = money;
+        }
+
+        getIdNumber() {
+            return this.idNumber;
+        }
+
+        setIdNumber(value) {
+            this.idNumber = value;
+        }
+
+        getUserName() {
+            return this.userName;
+        }
+
+        setUserName(value) {
+            this.userName = value;
+        }
+
+        getBankName() {
+            return this.bankName;
+        }
+
+        setBankName(value) {
+            this.bankName = value;
+        }
+
+        getMoney() {
+            return this.money;
+        }
+
+        setMoney(value) {
+            this.money = value;
+        }
+        toString() {
+            return 'stk: ' + this.idNumber + 'chủ tài khoản: ' + this.userName + 'ngân hàng: ' + this.bankName
+                            + 'số dư: ' + this.money;
+        }
+    }
+    let user1 = new BankAccount(12312,'Pham Anh Tuan','VPB',100000);
+    let user2 = new BankAccount(45645,'Nguyen Thi Ngoc','TCB',200000);
+
+</script>
+</body>
+</html>

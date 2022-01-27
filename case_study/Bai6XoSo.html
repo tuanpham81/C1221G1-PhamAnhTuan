@@ -11,6 +11,8 @@
 <input type="number" id="num4">
 <input type="number" id="num5">
 <input type="number" id="num6">
+<button onclick="showBoughtTicket()">Mua vé</button>
+<button onclick="showResult()">Xem kết quả</button>
 <script>
     class Ticket {
         constructor(num1,num2,num3,num4,num5,num6) {
@@ -21,26 +23,37 @@
             this.num5 = num5;
             this.num6 = num6;
         }
-        getAllNum(){
-            return [this.num1,this.num2,this.num3,this.num4,this.num5,this.num6]
+        getNum(){
+            return this.num1;
         }
         setNum(){
-            this.num1 = document.getElementById('num1');
-            this.num2 = document.getElementById('num2');
-            this.num3 = document.getElementById('num3');
-            this.num4 = document.getElementById('num4');
-            this.num5 = document.getElementById('num5');
-            this.num6 = document.getElementById('num6');
+            this.num1 = document.getElementById('num1')
+            this.num2 = document.getElementById('num2')
+            this.num3 = document.getElementById('num3')
+            this.num4 = document.getElementById('num4')
+            this.num5 = document.getElementById('num5')
+            this.num6 = document.getElementById('num6')
         }
+        b
+        showBoughtTicket (){
+            document.write(this.numArray)
+        }
+
+
     }
     class Customer {
         constructor() {
         }
-        NhapSo(){
+        buy(){
+
 
         }
 
     }
+    ge
+    let ticket1 = new Ticket(arr1)
+    arr1 = ticket1.getAllNum()
+    alert(arr1)
 </script>
 </body>
 </html>

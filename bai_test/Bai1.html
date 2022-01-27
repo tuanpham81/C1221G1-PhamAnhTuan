@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhập số lượng phần tử: '));
+    let arr = [];
+    for (let i = 0; i < n ; i++) {
+            arr[i] = parseInt( prompt('Nhập số thứ ' + i));
+    }
+    alert(arr);
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < arr.length ; i++) {
+        if (i % 3 == 0 && arr[i] % 5 ==0){
+            sum += arr[i];
+            count++
+        }
+    }
+    alert('trung bình là: '+ sum/count)
+
+</script>
+</body>
+</html>

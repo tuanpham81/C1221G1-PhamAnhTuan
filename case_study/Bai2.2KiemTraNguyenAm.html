@@ -7,17 +7,24 @@
 <body>
 <script>
     // kiểm tra lại
-    let char = null;
+    let char;
     do {
-        char = prompt('Nhập ký tự: ').value;
+        char = prompt('Nhập ký tự: ');
     }
     while(isNaN(char) == false)
-
-    if (char == 'u' || 'e' || 'o' || 'a' || 'i' ){
+    arr = ['u','e','o','a','i']
+    let flag = false;
+    for (let i = 0; i < arr.length; i++) {
+        if (char == arr[i] ){
+            flag = true;
+        }
+    }
+    if (flag) {
         alert('là nguyên âm')
     } else {
         alert('là phụ âm')
     }
+
 </script>
 </body>
 </html>
