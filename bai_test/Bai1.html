@@ -9,18 +9,22 @@
     let n = parseInt(prompt('Nhập số lượng phần tử: '));
     let arr = [];
     for (let i = 0; i < n ; i++) {
-            arr[i] = parseInt( prompt('Nhập số thứ ' + i));
+        do {
+            arr[i] = prompt('Nhập số thứ ' + i);
+        } while (parseInt(arr[i]) != arr[i])
     }
     alert(arr);
+
     let sum = 0;
     let count = 0;
     for (let i = 0; i < arr.length ; i++) {
+        parseInt(arr[i]);
         if (i % 3 == 0 && arr[i] % 5 ==0){
             sum += arr[i];
-            count++
+            count++;
         }
     }
-    alert('trung bình là: '+ sum/count)
+    alert('Trung bình là: '+ sum/count)
 
 </script>
 </body>

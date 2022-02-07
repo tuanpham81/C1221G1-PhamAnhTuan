@@ -51,7 +51,20 @@
         }
     }
     let user1 = new BankAccount(12312,'Pham Anh Tuan','VPB',100000);
-    let user2 = new BankAccount(45645,'Nguyen Thi Ngoc','TCB',200000);
+    let listOfAccount = [user1]
+    function themMoi() {
+    let idNumber = prompt('Nhập stk');
+    let userName = prompt('Nhập tên người dùng');
+    let bankName = prompt('Nhập tên ngân hàng');
+    let money = prompt('Nhập số dư');
+    let newAccount = new BankAccount(idNumber,userName,bankName,money);
+        listOfAccount.push(newAccount);
+    }
+
+    function hienThi() {
+        
+
+    }
 
 </script>
 </body>
