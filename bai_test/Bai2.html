@@ -6,25 +6,28 @@
 </head>
 <body>
 <script>
-    let word = prompt('Nhập từ cần viết tắt:');
-    let wordArr = word.split(' ');
-    let vietTatArr = [];
-    if(wordArr.length > 1){
-        for (let i = 0; i < wordArr.length ; i++) {
-            if (wordArr[i] == ''){
-                wordArr.splice(i,1);
-                i--;
+    function VietTat(word) {
+        word = prompt('Nhập từ cần viết tắt:');
+        let wordArr = word.trim().split(' ');
+        let vietTatArr = [];
+        if(wordArr.length > 1){
+            for (let i = 0; i < wordArr.length ; i++) {
+                if (wordArr[i] == ''){
+                    wordArr.splice(i,1);
+                    i--;
+                }
             }
+            alert(wordArr);
+            for (let i = 0; i < wordArr.length ; i++) {
+                vietTatArr += wordArr[i][0];
+            }
+            let vietTat = vietTatArr.toString().toUpperCase();
+            alert(vietTat);
+        }  else {
+            alert('Chỉ có 1 từ');
         }
-        alert(wordArr);
-        for (let i = 0; i < wordArr.length ; i++) {
-               vietTatArr += wordArr[i][0];
-            }
-             let vietTat = vietTatArr.toString().toUpperCase()
-        alert(vietTat)
-    }  else {
-        alert('Chỉ có 1 từ');
     }
+    VietTat();
 </script>
 </body>
 </html>

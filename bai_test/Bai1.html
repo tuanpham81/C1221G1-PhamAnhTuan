@@ -6,15 +6,17 @@
 </head>
 <body>
 <script>
-    let n = parseInt(prompt('Nhập số lượng phần tử: '));
+    let n;
+    do{
+        n = parseInt(prompt('Nhập số lượng phần tử (<=50)'));
+    } while (n > 50);
     let arr = [];
     for (let i = 0; i < n ; i++) {
         do {
             arr[i] = prompt('Nhập số thứ ' + i);
-        } while (parseInt(arr[i]) != arr[i])
+        } while (parseInt(arr[i]) != arr[i]);
     }
     alert(arr);
-
     let sum = 0;
     let count = 0;
     for (let i = 0; i < arr.length ; i++) {
@@ -24,8 +26,7 @@
             count++;
         }
     }
-    alert('Trung bình là: '+ sum/count)
-
+    alert('Trung bình là: '+ sum/count);
 </script>
 </body>
 </html>

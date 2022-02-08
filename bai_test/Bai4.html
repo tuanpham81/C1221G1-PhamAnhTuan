@@ -5,6 +5,9 @@
     <title>bài 4</title>
 </head>
 <body>
+<button onclick="themMoi()">Thêm tài khoản</button>
+<br>
+<p id="list"></p>
 <script>
     class BankAccount {
         constructor(idNumber,userName,bankName,money) {
@@ -46,26 +49,33 @@
             this.money = value;
         }
         toString() {
-            return 'stk: ' + this.idNumber + 'chủ tài khoản: ' + this.userName + 'ngân hàng: ' + this.bankName
-                            + 'số dư: ' + this.money;
+            return 'Stk: ' + this.idNumber + ', ' + 'Chủ tài khoản: ' + this.userName + ', '
+                + 'Ngân hàng: ' + this.bankName + ', ' + 'Số dư: ' + this.money;
         }
     }
     let user1 = new BankAccount(12312,'Pham Anh Tuan','VPB',100000);
     let listOfAccount = [user1]
     function themMoi() {
-    let idNumber = prompt('Nhập stk');
-    let userName = prompt('Nhập tên người dùng');
-    let bankName = prompt('Nhập tên ngân hàng');
-    let money = prompt('Nhập số dư');
-    let newAccount = new BankAccount(idNumber,userName,bankName,money);
+        let idNumber;
+            do {
+                idNumber = prompt('Nhập stk (5 chữ số)');
+            } while (parseInt(idNumber) != idNumber || idNumber.length != 5);
+        let userName = prompt('Nhập tên người dùng');
+        let bankName = prompt('Nhập tên ngân hàng');
+        let money = prompt('Nhập số dư');
+        let newAccount = new BankAccount(idNumber, userName, bankName, money);
         listOfAccount.push(newAccount);
+        hienThi(listOfAccount);
     }
 
     function hienThi() {
-        
-
+        let list = '<p>' + 'DANH SÁCH TÀI KHOẢN' + '</p>\n';
+        for (let i = 0; i < listOfAccount.length ; i++) {
+                list += '<p>' + listOfAccount[i] + '</p>\n';
+        }
+        document.getElementById('list').innerHTML = list;
     }
-
+    hienThi();
 </script>
 </body>
 </html>

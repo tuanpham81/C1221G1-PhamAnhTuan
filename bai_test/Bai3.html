@@ -6,32 +6,35 @@
 </head>
 <body>
 <script>
-    function isFibonacci(num) {
-        let i = 0;
-        let fibonacciNum = 1;
-        do {
-            fibonacciNum += i;
-            i = fibonacciNum - i;
-            if(num == fibonacciNum){
-                return true;
-            }
-        } while (fibonacciNum <= num)
-    }
-
-    function timSoFibonacci(arr) {
-        arr = [1,5,6,13,9,12,8,0,5,1];
+    function timSoFibonacci(inputArr) {
+        let n = parseInt(prompt('Nhập số lượng phần tử'));
+        inputArr = [];
+        for (let i = 0; i < n ; i++) {
+                inputArr[i] = prompt('Nhập số thứ ' + i);
+        }
+        alert('Mảng đã tạo là' + inputArr);
+        function isFibonacci(num) {
+            let i = 0;
+            let fibonacciNum = 1;
+            do {
+                fibonacciNum += i;
+                i = fibonacciNum - i;
+                if (num == fibonacciNum) {
+                    return true;
+                }
+            } while (fibonacciNum <= num);
+        }
         let fibonacciArr = [];
-        for (let i = 0; i < arr.length ; i++) {
-            if(isFibonacci(arr[i]) == true){
-                fibonacciArr.push(arr[i]);
+        for (let i = 0; i < inputArr.length; i++) {
+            if (isFibonacci(inputArr[i]) == true) {
+                fibonacciArr.push(inputArr[i]);
             }
         }
-        function compare(a,b){
-            return a-b;
+        function compare(a, b) {
+            return a - b;
         }
-        alert(fibonacciArr.sort(compare));
+        alert('các số fibonacci là' + fibonacciArr.sort(compare));
     }
-
     timSoFibonacci();
 </script>
 </body>
