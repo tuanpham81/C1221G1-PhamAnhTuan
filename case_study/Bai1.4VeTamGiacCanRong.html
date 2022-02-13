@@ -9,16 +9,16 @@
     //vẽ hình tam giác cân rỗng
     for (let i = 1; i <= 5; i++) {
         for (let k = 5; k >= i ; k--) {
-            document.write("&nbsp&nbsp&nbsp")
+            document.write("&nbsp&nbsp")
         }
         for (let j = 1; j <= i*2-1; j++) {
             if(i == 1 || i == 5 || j == 1 || j == i*2-1){
-                document.writeln("*")
+                document.write("*")
             } else {
-                document.write("&nbsp&nbsp&nbsp")
+                document.write("&nbsp&nbsp")
             }
         }
-        document.writeln("<br/>")
+        document.write("<br>")
     }
 
 </script>

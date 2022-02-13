@@ -12,16 +12,16 @@
 
     <br>
     <h3>Product Name</h3>
-    <table id="display"></table>
+    <table border="1" style="border-collapse: collapse" id="display" ></table>
 <script>
     let products = ['Nokia','Iphone'];
     displayAll()
     function displayAll() {
         let str = '<tr>' +
             '<td>No</td>' +
-            '<td>' + products.length + ' sản phẩm' + '</td>' +
-            '<td></td>' +
-            '<td></td>'+
+            '<td>' + products.length + 'sp' + '</td>' +
+            '<td>Edit</td>' +
+            '<td>Delete</td>'+
             '</tr>';
         for (let i = 0; i < products.length; i++){
             str += '<tr>' +
@@ -40,16 +40,18 @@
         alert('Đã thêm sản phẩm '+ p);
     }
     function delProduct(index) {
+        alert('Đã xóa sản phẩm ' + products[index]);
         products.splice(index,1);
         displayAll();
-        alert('Đã xóa sản phẩm ' + products[index]); // chưa hiển thị đc tên sản phẩm
+         // chưa hiển thị đc tên sản phẩm
     }
+
     function editProduct(index) {
         let editForm;
-        editForm = '<input type="text" id="editedProduct" value="'+products[index]+'">' +
-            '<button onclick="saveProduct('+index+')">Save</button>';
-        document.getElementById('inputForm').innerHTML=editForm;}
-
+        editForm =  '<input type="text" id="editedProduct" value="'+products[index]+'">' +
+                    '<button onclick="saveProduct('+index+')">Save</button>';
+        document.getElementById('inputForm').innerHTML= editForm;
+    }
 
     function saveProduct(index) {
         products[index] = document.getElementById('editedProduct').value;

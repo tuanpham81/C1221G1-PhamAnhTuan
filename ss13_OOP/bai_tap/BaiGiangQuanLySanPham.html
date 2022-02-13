@@ -69,17 +69,15 @@
 
     function xoaXe(id) {
 
-
     }
 
     function suaXe(id) {
         idChinhSua = id;// lưu địa chỉ id cần chỉnh sửa
         document.getElementById("bienSo").value = danhSachXe[id].getBienSo();
         document.getElementById("chuSoHuu").value = danhSachXe[id].getChuSoHuu();
-        document.getElementById("dungTichXL").value = danhSachXe[id].getDungTichXL()
+        document.getElementById("dungTichXL").value = danhSachXe[id].getDungTichXL();
         document.getElementById("themMoi").style.display='none';
         document.getElementById("luu").style.display='block';
-
     }
 
     function luu() {
@@ -97,7 +95,7 @@
         hienThi(danhSachXe);
     }
 
-    function hienThi(danhSach) {
+    function hienThi(danhSach) { //tại sao cần dùng tham số danhsach?
         let bang = '<table border="1" style="border-collapse: collapse">\n' +
             '    <tr>\n' +
             '        <th>STT</th>\n' +

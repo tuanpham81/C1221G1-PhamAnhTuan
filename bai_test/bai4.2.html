@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4 cách 2</title>
+</head>
+<body>
+<input placeholder="Mã khách hàng" id="idNumber">
+<input placeholder="Tên khách hàng" id="userName">
+<input placeholder="Ngân hàng" id="bankName">
+<input placeholder="Số dư" id="money">
+<button id="themMoi" onclick="themMoi()" style="display: block">Thêm</button>
+<button id="luuLai" onclick="luuLai()" style="display: none">Lưu</button>
+<p>DANH SÁCH KHÁCH HÀNG</p>
+<table border="1" style="border-collapse: collapse" id="list"></table>
+<script>
+    class BankAccount {
+        constructor(idNumber,userName,bankName,money) {
+            this.idNumber = idNumber;
+            this.userName = userName;
+            this.bankName = bankName;
+            this.money = money;
+        }
+
+        getIdNumber() {
+            return this.idNumber;
+        }
+
+        setIdNumber(value) {
+            this.idNumber = value;
+        }
+
+        getUserName() {
+            return this.userName;
+        }
+
+        setUserName(value) {
+            this.userName = value;
+        }
+
+        getBankName() {
+            return this.bankName;
+        }
+
+        setBankName(value) {
+            this.bankName = value;
+        }
+
+        getMoney() {
+            return this.money;
+        }
+
+        setMoney(value) {
+            this.money = value;
+        }
+        toString() {
+            return 'Stk: ' + this.idNumber + ', ' + 'Chủ tài khoản: ' + this.userName + ', '
+                + 'Ngân hàng: ' + this.bankName + ', ' + 'Số dư: ' + this.money;
+        }
+    }
+    let user1 = new BankAccount(12312,'Pham Anh Tuan','VPB',100000);
+    let listOfAccount = [user1]
+    hienThi();
+    function themMoi() {
+        let idNumber = document.getElementById('idNumber').value;
+        let userName = document.getElementById('userName').value;
+        let bankName = document.getElementById('bankName').value;
+        let money = document.getElementById('money').value;
+        if (idNumber.length == 5 && parseInt(idNumber) == idNumber){
+            let newUser = new BankAccount(idNumber,userName,bankName,money);
+            listOfAccount.push(newUser);
+            hienThi();
+            document.getElementById('idNumber').value = '';
+            document.getElementById('userName').value = '';
+            document.getElementById('bankName').value = '';
+            document.getElementById('money').value = '';
+        } else {
+            alert('Nhập lại số tài khoản')
+        }
+    }
+
+    function edit(index) {
+        indexChinhSua = index;
+        document.getElementById('idNumber').value = listOfAccount[index].getIdNumber();
+        document.getElementById('userName').value = listOfAccount[index].getUserName();
+        document.getElementById('bankName').value = listOfAccount[index].getBankName();
+        document.getElementById('money').value = listOfAccount[index].getMoney();
+        document.getElementById('themMoi').style.display = 'none';
+        document.getElementById('luuLai').style.display = 'block';
+    }
+
+    function luuLai() {
+        let idNumber = document.getElementById('idNumber').value;
+        let userName = document.getElementById('userName').value;
+        let bankName = document.getElementById('bankName').value;
+        let money = document.getElementById('money').value;
+        listOfAccount[indexChinhSua].setIdNumber(idNumber);
+        listOfAccount[indexChinhSua].setUserName(userName);
+        listOfAccount[indexChinhSua].setBankName(bankName);
+        listOfAccount[indexChinhSua].setMoney(money);
+        document.getElementById('themMoi').style.display = 'block';
+        document.getElementById('luuLai').style.display = 'none';
+        document.getElementById('idNumber').value = '';
+        document.getElementById('userName').value = '';
+        document.getElementById('bankName').value = '';
+        document.getElementById('money').value = '';
+        hienThi()
+    }
+
+    function deleteCustomer(index) {
+        listOfAccount.splice(index,1)
+        hienThi();
+    }
+
+    function hienThi() {
+        let bang = '<tr>\n' +
+                '<td>'+ 'Stt' +'</td>\n' +
+                '<td>'+ 'Mã khách hàng' +'</td>\n' +
+                '<td>'+ 'Tên khách hàng' +'</td>\n' +
+                '<td>'+ 'Ngân hàng' +'</td>\n' +
+                '<td>'+ 'Số dư' +'</td>\n' +
+                '<td>'+ 'Edit' +'</td>\n' +
+                '<td>'+ 'Xóa' +'</td>\n' +
+                '</tr>';
+        for (let i = 0; i < listOfAccount.length; i++) {
+            bang += '<tr>\n' +
+                '<td>' + (i+1) + '</td>\n' +
+                '<td>' + listOfAccount[i].getIdNumber() + '</td>\n' +
+                '<td>' + listOfAccount[i].getUserName() + '</td>\n' +
+                '<td>' + listOfAccount[i].getBankName() + '</td>\n' +
+                '<td>' + listOfAccount[i].getMoney() + '</td>' +
+                '<td>' + '<button onclick="edit('+ i +')">Sửa</button>' + '</td>\n' +
+                '<td>' + '<button onclick="deleteCustomer('+ i +')">Xóa</button>' + '</td>\n' +
+                '<tr>\n';
+        }
+        document.getElementById('list').innerHTML = bang;
+    }
+</script>
+</body>
+</html>
